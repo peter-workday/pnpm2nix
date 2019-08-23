@@ -154,7 +154,7 @@ in {
         (fetchurl {
           url = url;
           "${shaType}" = shaSum;
-        }) else if allowImpure then fetchTarball {
+        }) else if allowImpure then fetchurl {
           # Note: Resolved tarballs(github revs for example)
           # does not yet have checksums
           # https://github.com/pnpm/pnpm/issues/1035
